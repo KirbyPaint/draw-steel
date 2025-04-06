@@ -45,6 +45,14 @@ body {
 	text-align: center;
 }
 
+/* Essence number select */
+.essenceSelect {
+	width: 50%;
+	height: 4rem;
+	font-size: 3rem;
+	text-align: center;
+}
+
 /* Full button grid container */
 .buttonGrid {
 	/* border: 2px solid red; */
