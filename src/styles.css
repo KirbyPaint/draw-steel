@@ -1,0 +1,45 @@
+.verticalCenter {
+	display: flex;
+	align-items: center; /* Vertically center the content */
+	justify-content: center; /* Horizontally center the content */
+	flex-direction: column; /* Stack items vertically */
+	flex-grow: 1; /* Allow the container to grow if needed */
+	height: 100vh; /* Full viewport height */
+	width: 100%;
+}
+
+.buttonToggle {
+	display: inline-block;
+	padding: 10px 20px;
+	font-size: 3rem;
+	cursor: pointer;
+	text-align: center;
+	color: #fff;
+	/* background-color: #007bff; */
+	border: none;
+	border-radius: 5px;
+	transition: background-color 0.3s ease;
+	width: 100%; /* Set a fixed width for consistency */
+	height: 40%;
+}
+
+/* Different color buttons */
+/* Need yellow, blue, red, green */
+.buttonToggle.yellow {
+	background-color: #ffc107;
+}
+.buttonToggle.blue {
+	background-color: #007bff;
+}
+.buttonToggle.red {
+	background-color: #dc3545;
+}
+.buttonToggle.green {
+	background-color: #28a745;
+}
+.buttonToggle.off {
+	background-color: #6c757d; /* Grey color for 'off' state */
+}
+/* .buttonToggle:hover:not(.off) {
+	background-color: #0056b3; /* Darken the color on hover for non-off buttons */
+		/* } */

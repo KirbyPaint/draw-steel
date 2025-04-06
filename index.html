@@ -16,14 +16,13 @@
 		<p>M A R I P</p>
 		<div id="div_actions"></div>
 		<h1>Quick Action Tracker</h1>
-		<input type="checkbox" id="chk_movement" name="chk_movement" value="Movement">
-		<label for="chk_movement"> Movement</label><br>
-		<input type="checkbox" id="chk_maneuver" name="chk_maneuver" value="Maneuver">
-		<label for="chk_maneuver"> Maneuver</label><br>
-		<input type="checkbox" id="chk_action" name="chk_action" value="Action">
-		<label for="chk_action"> Action</label><br>
-		<input type="checkbox" id="chk_trigger" name="chk_trigger" value="Triggered Action">
-		<label for="chk_trigger"> Triggered Action</label><br>
+		<div class="verticalCenter">
+			<button id="btn_movement" class="buttonToggle yellow" onclick="addAction('Movement')">Movement</button>
+			<button id="btn_maneuver" class="buttonToggle blue" onclick="addAction('Maneuver')">Maneuver</button>
+			<button id="btn_action" class="buttonToggle red" onclick="addAction('Action')">Action</button>
+			<button id="btn_trigger" class="buttonToggle green" onclick="addAction('Triggered Action')">Triggered
+				Action</button>
+		</div>
 	</body>
 	<div id="result"></div>
 
