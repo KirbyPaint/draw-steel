@@ -43,3 +43,17 @@ function createActionsTable(skills) {
 	}
 	return table; // Return the table in case it's needed for further manipulation
 }
+
+// Change button color on click
+function changeButtonColor(buttonId) {
+	const button = document.getElementById(buttonId);
+	if (button) {
+		if (button.classList.contains('off')) {
+			button.classList.remove('off');
+		} else {
+			button.classList.add('off');
+		}
+	} else {
+		console.error(`Button with ID ${buttonId} not found.`);
+	}
+}
