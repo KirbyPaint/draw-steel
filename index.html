@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="./src/scripts.js"></script>
+		<!-- Link to the CSS file for styling -->
+		<link rel="stylesheet" href="./src/styles.css">
+		<title>Draw Steel Cheat Sheet Beta</title>
+	</head>
+
+	<body>
+		<!-- This area will have 4 simple buttons to keep track of the actions used -->
+		<h1>Actions</h1>
+		<p>M A R I P</p>
+		<div id="div_actions"></div>
+		<h1>Quick Action Tracker</h1>
+		<input type="checkbox" id="chk_movement" name="chk_movement" value="Movement">
+		<label for="chk_movement"> Movement</label><br>
+		<input type="checkbox" id="chk_maneuver" name="chk_maneuver" value="Maneuver">
+		<label for="chk_maneuver"> Maneuver</label><br>
+		<input type="checkbox" id="chk_action" name="chk_action" value="Action">
+		<label for="chk_action"> Action</label><br>
+		<input type="checkbox" id="chk_trigger" name="chk_trigger" value="Triggered Action">
+		<label for="chk_trigger"> Triggered Action</label><br>
+	</body>
+	<div id="result"></div>
+
+	<script>
+		const x = document.getElementById("result");
+		if (typeof (Storage) !== "undefined") {
+			x.innerHTML = "Your browser supports Web storage!";
+		} else {
+			x.innerHTML = "Sorry, no Web storage support!";
+		}
+	</script>
+
+</html>
