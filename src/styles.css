@@ -27,6 +27,24 @@ body {
 	height: 100%;
 }
 
+/* Container for essence number box */
+.essenceContainer {
+	/* Unless the fucking AI knows what it's actually doing
+	it should stop suggesting blatantly incorrect shit */
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* Essence number input field */
+.essenceInput {
+	width: 50%;
+	height: 4rem;
+	font-size: 3rem;
+	text-align: center;
+}
+
 /* Full button grid container */
 .buttonGrid {
 	/* border: 2px solid red; */

@@ -12,13 +12,45 @@
 
 	<body>
 		<div class="verticalCenter">
-			<!-- This area will have 4 simple buttons to keep track of the actions used -->
-			<h1>Actions</h1>
-			<p>M A R I P</p>
-			<div id="div_actions"></div>
-			<div><button id="btn_refresh" onclick="refresh()">Refresh</button></div>
-			<h1>Quick Action Tracker</h1>
+			<!-- Languages quick reference -->
+			<div id="languages">
+				<details>
+					<summary>Languages</summary>
+					<table class="languagesTable">
+						<tr>
+							<th>Language</th>
+							<th>Common Ancestries</th>
+							<th>Notes</th>
+						</tr>
+						<tr>
+							<td>Anjali</td>
+							<td>Devils, Hobgoblins</td>
+							<td>Language of contract law</td>
+						</tr>
+						<tr>
+							<td>Axiomatic</td>
+							<td>Memonek</td>
+							<td>Native language of Axiom, and the common language of the timescape by trade</td>
+						</tr>
+						<tr>
+							<td>Caelian</td>
+							<td>Orden Denizens</td>
+							<td>Common tongue of Orden</td>
+						</tr>
+					</table>
+				</details>
+			</div>
+			<div id="marip">
+				<h1>Actions</h1>
+				<p>M A R I P</p>
+				<div id="div_actions"></div>
+			</div>
+			<div id="essence" class="essenceContainer">
+				<input type="number" class="essenceInput" id="essence_range" placeholder="Essence"></input>
+			</div>
 			<div>
+				<!-- This area will have 4 simple buttons to keep track of the actions used -->
+				<div><button id="btn_refresh" onclick="refresh()">Refresh</button></div>
 				<div id="buttonGrid" class="buttonGrid">
 					<div class="buttonRow">
 						<button id="btn_movement" class="buttonToggle yellow"
