@@ -5,48 +5,22 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<script src="./src/scripts.js"></script>
-		<!-- Link to the CSS file for styling -->
 		<link rel="stylesheet" href="./src/styles.css">
 		<title>Draw Steel Cheat Sheet Beta</title>
 	</head>
 
 	<body>
 		<div class="verticalCenter">
-			<!-- Languages quick reference -->
-			<!-- <div id="languages">
-				<details>
-					<summary>Languages</summary>
-					<table class="languagesTable">
-						<tr>
-							<th>Language</th>
-							<th>Common Ancestries</th>
-							<th>Notes</th>
-						</tr>
-						<tr>
-							<td>Anjali</td>
-							<td>Devils, Hobgoblins</td>
-							<td>Language of contract law</td>
-						</tr>
-						<tr>
-							<td>Axiomatic</td>
-							<td>Memonek</td>
-							<td>Native language of Axiom, and the common language of the timescape by trade</td>
-						</tr>
-						<tr>
-							<td>Caelian</td>
-							<td>Orden Denizens</td>
-							<td>Common tongue of Orden</td>
-						</tr>
-					</table>
-				</details>
+
+			<div id="marip" class="maripContainer">
+				<input type="number" id="input_m" class="maripInput" placeholder="M"></input>
+				<input type="number" id="input_a" class="maripInput" placeholder="A"></input>
+				<input type="number" id="input_r" class="maripInput" placeholder="R"></input>
+				<input type="number" id="input_i" class="maripInput" placeholder="I"></input>
+				<input type="number" id="input_p" class="maripInput" placeholder="P"></input>
 			</div>
-			<div id="marip">
-				<h1>Actions</h1>
-				<p>M A R I P</p>
-				<div id="div_actions"></div>
-			</div> -->
+
 			<div id="essence" class="essenceContainer">
-				<!-- <input type="number" class="essenceInput" id="essence_range" placeholder="Essence"></input> -->
 				<select id="essence_type" class="essenceSelect">
 					<option value="-11">girl how are you still alive</option>
 					<option value="-10">-10</option>
@@ -112,35 +86,22 @@
 					<option value="50">50</option>
 				</select>
 			</div>
-			<div>
-				<!-- This area will have 4 simple buttons to keep track of the actions used -->
-				<div><button id="btn_refresh" onclick="refresh()">Refresh</button></div>
-				<div id="buttonGrid" class="buttonGrid">
-					<div class="buttonRow">
-						<button id="btn_movement" class="buttonToggle yellow"
-							onclick="changeButtonColor('btn_movement')">Movement</button>
-						<button id="btn_maneuver" class="buttonToggle blue"
-							onclick="changeButtonColor('btn_maneuver')">Maneuver</button>
-					</div>
-					<div class="buttonRow">
-						<button id="btn_action" class="buttonToggle red" onclick="changeButtonColor('btn_action')">Action</button>
-						<button id="btn_trigger" class="buttonToggle green" onclick="changeButtonColor('btn_trigger')">Triggered
-							Action</button>
-					</div>
+
+			<div id="buttonGrid" class="buttonGrid">
+				<div class="buttonRow">
+					<button id="btn_movement" class="buttonToggle yellow"
+						onclick="changeButtonColor('btn_movement')">Movement</button>
+					<button id="btn_maneuver" class="buttonToggle blue"
+						onclick="changeButtonColor('btn_maneuver')">Maneuver</button>
+				</div>
+				<div class="buttonRow">
+					<button id="btn_action" class="buttonToggle red" onclick="changeButtonColor('btn_action')">Action</button>
+					<button id="btn_trigger" class="buttonToggle green" onclick="changeButtonColor('btn_trigger')">Triggered
+						Action</button>
 				</div>
 			</div>
-
-			<!-- <div id="testing">
-				<div id="result"></div>
-				<script>
-					const x = document.getElementById("result");
-					if (typeof (Storage) !== "undefined") {
-						x.innerHTML = "Your browser supports Web storage!";
-					} else {
-						x.innerHTML = "Sorry, no Web storage support!";
-					}
-				</script>
-			</div> -->
+			<div class="refreshButtonContainer"><button id="btn_refresh" class="refreshButton" onclick="refresh()">Refresh
+					Actions</button></div>
 
 		</div>
 	</body>

@@ -5,8 +5,6 @@
 }
 
 body {
-	border: 5px solid purple;
-
 	font-family: Arial, sans-serif;
 	background-color: #f8f9fa;
 	color: #333;
@@ -17,14 +15,30 @@ body {
 }
 
 .verticalCenter {
-	border: 2px solid blue;
-	
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
 	flex-grow: 1;
 	height: 100%;
+}
+
+.maripContainer {
+	width: 100%;
+	height: 4rem;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row;
+}
+
+.maripInput {
+	width: 20%;
+	height:100%;
+	font-size: 3rem;
+	text-align: center;
+	border-radius: 5px;
 }
 
 /* Container for essence number box */
@@ -47,7 +61,7 @@ body {
 
 /* Essence number select */
 .essenceSelect {
-	width: 50%;
+	width: 100%;
 	height: 4rem;
 	font-size: 3rem;
 	text-align: center;
@@ -55,17 +69,14 @@ body {
 
 /* Full button grid container */
 .buttonGrid {
-	/* border: 2px solid red; */
-	/* margin: 20px auto; */
-	/* width: 100%; */
-	/* background-color: #fff; */
 	display: flex;
 	flex-direction: column;
+
+	width: 100%;
 }
 
 /* Button row styling */
 .buttonRow {
-	/* border: 2px solid green; */
 	display: flex;
 	width: 100%;
 }
@@ -96,4 +107,21 @@ body {
 }
 .buttonToggle.off {
 	background-color: #6c757d;
+}
+
+.refreshButtonContainer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+}
+
+.refreshButton {
+	width: 100%;
+	height: 3rem;
+	font-size: 2rem;
+	border-radius: 5px;
+	border: none;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
 }
