@@ -1,13 +1,33 @@
 // Change button color on click
-function changeButtonColor(buttonId) {
+function changeButtonColor(id) {
+	const buttonId = id.replace(/_class$/, '');
 	const button = document.getElementById(buttonId);
 	if (button) {
 		if (button.classList.contains('off')) {
 			button.classList.remove('off');
-			saveToLocalStorage(buttonId, true);
+			switch (buttonId) {
+				case 'btn_movement':
+					button.classList.add('yellow');
+					saveToLocalStorage(buttonId, "yellow");
+					break;
+				case 'btn_maneuver':
+					button.classList.add('blue');
+					saveToLocalStorage(buttonId, "blue");
+					break;
+				case 'btn_action':
+					button.classList.add('red');
+					saveToLocalStorage(buttonId, "red");
+					break;
+				case 'btn_trigger':
+					button.classList.add('green');
+					saveToLocalStorage(buttonId, "green");
+					break;
+				default:
+					console.error(`Unknown button ID: ${buttonId}`);
+			}
 		} else {
 			button.classList.add('off');
-			saveToLocalStorage(buttonId, false);
+			saveToLocalStorage(buttonId, "off");
 		}
 	} else {
 		console.error(`Button with ID ${buttonId} not found.`);
@@ -15,11 +35,31 @@ function changeButtonColor(buttonId) {
 }
 
 function refresh() {
-	// Will restore all buttons to their original state
+	buttonRefresh();
+}
+
+function buttonRefresh() {
+	const defaultClasses = {
+		'btn_movement': 'yellow',
+		'btn_maneuver': 'blue',
+		'btn_action': 'red',
+		'btn_trigger': 'green'
+	};
 	const buttons = document.querySelectorAll('.buttonToggle');
 	buttons.forEach(button => {
-		button.classList.remove('off');
-		saveToLocalStorage(buttonId, true);
+		// Remove all classes
+		button.className = button.className.replace(/\byellow|blue|red|green\b/g, '').trim();
+		button.classList.add('off'); // Set to off by default
+
+		// Reset to default class
+		const buttonId = button.id;
+		if (defaultClasses[buttonId]) {
+			button.classList.remove('off');
+			button.classList.add(defaultClasses[buttonId]);
+			saveToLocalStorage(buttonId, defaultClasses[buttonId]);
+		} else {
+			console.error(`No default class for button ID: ${buttonId}`);
+		}
 	});
 }
 

@@ -55,10 +55,10 @@ function saveToLocalStorage(key, value) {
 function setLocalStorage() {
 	try {
 		// Go through and set defaults for localStorage if it doesn't yet exist
-		saveToLocalStorage("btn_movement", true);
-		saveToLocalStorage("btn_maneuver", true);
-		saveToLocalStorage("btn_action", true);
-		saveToLocalStorage("btn_trigger", true);
+		saveToLocalStorage("btn_movement_class", "yellow");
+		saveToLocalStorage("btn_maneuver_class", "blue");
+		saveToLocalStorage("btn_action_class", "red");
+		saveToLocalStorage("btn_trigger_class", "green");
 		saveToLocalStorage("input_m", "0");
 		saveToLocalStorage("input_a", "0");
 		saveToLocalStorage("input_r", "0");
