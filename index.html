@@ -11,29 +11,41 @@
 	</head>
 
 	<body>
-		<!-- This area will have 4 simple buttons to keep track of the actions used -->
-		<h1>Actions</h1>
-		<p>M A R I P</p>
-		<div id="div_actions"></div>
-		<h1>Quick Action Tracker</h1>
 		<div class="verticalCenter">
-			<button id="btn_movement" class="buttonToggle yellow"
-				onclick="changeButtonColor('btn_movement')">Movement</button>
-			<button id="btn_maneuver" class="buttonToggle blue" onclick="changeButtonColor('btn_maneuver')">Maneuver</button>
-			<button id="btn_action" class="buttonToggle red" onclick="changeButtonColor('btn_action')">Action</button>
-			<button id="btn_trigger" class="buttonToggle green" onclick="changeButtonColor('btn_trigger')">Triggered
-				Action</button>
+			<!-- This area will have 4 simple buttons to keep track of the actions used -->
+			<h1>Actions</h1>
+			<p>M A R I P</p>
+			<div id="div_actions"></div>
+			<div><button id="btn_refresh" onclick="refresh()">Refresh</button></div>
+			<h1>Quick Action Tracker</h1>
+			<div>
+				<div id="buttonGrid" class="buttonGrid">
+					<div class="buttonRow">
+						<button id="btn_movement" class="buttonToggle yellow"
+							onclick="changeButtonColor('btn_movement')">Movement</button>
+						<button id="btn_maneuver" class="buttonToggle blue"
+							onclick="changeButtonColor('btn_maneuver')">Maneuver</button>
+					</div>
+					<div class="buttonRow">
+						<button id="btn_action" class="buttonToggle red" onclick="changeButtonColor('btn_action')">Action</button>
+						<button id="btn_trigger" class="buttonToggle green" onclick="changeButtonColor('btn_trigger')">Triggered
+							Action</button>
+					</div>
+				</div>
+			</div>
+
+			<!-- This section will show the result of the web storage support check -->
+			<!-- Just for testing -->
+			<div id="result"></div>
+			<script>
+				const x = document.getElementById("result");
+				if (typeof (Storage) !== "undefined") {
+					x.innerHTML = "Your browser supports Web storage!";
+				} else {
+					x.innerHTML = "Sorry, no Web storage support!";
+				}
+			</script>
 		</div>
 	</body>
-	<div id="result"></div>
-
-	<script>
-		const x = document.getElementById("result");
-		if (typeof (Storage) !== "undefined") {
-			x.innerHTML = "Your browser supports Web storage!";
-		} else {
-			x.innerHTML = "Sorry, no Web storage support!";
-		}
-	</script>
 
 </html>
